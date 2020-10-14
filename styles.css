@@ -1,0 +1,225 @@
+body{
+    background-color: #f4f4f4;
+    color: rgb(20, 20, 20);
+    font-family: Verdana, Geneva, "Tahoma", sans-serif;
+    font-size: 18px;
+    line-height: 1.6em;
+
+}
+
+
+
+#mainHeader{
+    color: #fff;
+    background-image:url('./Bilder/skog.jpg');
+    text-align: center;
+	background-position: center right;
+	min-height:300px;
+	/* margin-bottom:30px; */
+}
+
+#mainHeader h1{
+    color: #fff;
+	font-size:80px;
+	line-height: 1.6em;
+	padding-top:80px;
+}
+
+ #navbar{
+	background-color:#63624D;
+	margin-bottom: 10px;
+	position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+	padding: 0px;
+    overflow: hidden;
+    text-align: center;
+    /* grid-column: 1/-1;
+    grid-row: 2/3; */
+}
+
+#navbar ul{
+	margin-top:30px;
+	padding: 0px;
+	list-style: none;
+	margin-left: 0px;
+}
+
+#navbar li{
+	display:inline;
+}
+
+#navbar a{
+	color:#fff;
+	text-decoration: none;
+	font-size:25px;
+	padding-right:25px;
+}
+
+
+
+.gridContainer{
+    display: grid;
+    grid-gap: 1em;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-rows: repeat(6, 1fr); */
+    box-sizing: border-box;
+    /* grid-template-columns: fit-content(100%); */
+    }
+
+
+    .gridContainer div{
+    border-style: none;
+    padding: 5px;
+    }
+
+
+.section1{
+    grid-column: 1/10;
+    /* grid-row: 1/2; */
+}
+
+.section2{  
+    grid-column: 10/13;
+    grid-row: 1/2; 
+    max-width: 100%;
+    
+}
+
+
+
+.section3{
+    grid-column: 1/13;
+    /* grid-row: 2/3 */
+}
+
+.buttonInstagram{
+	background-color:#63624D;
+	border: solid 3px;
+	padding: 20px;
+    border-radius: 10px;
+    color: black;
+    font-size: 20px;
+    justify-self: center;
+    text-align: center;
+}
+
+.divInstagram{
+    text-align: center;
+    grid-column: 1/13;
+
+}
+
+
+
+.section4{
+    grid-column: 1/4;
+    max-width: 100%;
+    /* grid-row: 3/4; */
+}
+
+
+.section5{
+    grid-column:4/7;
+    max-width: 100%;
+    /* grid-row: 3/4; */
+}
+
+.section6{
+    grid-column: 7/10;
+    max-width: 100%;
+    /* grid-row: 3/4; */
+}
+
+.section7{
+    grid-column: 10/13;
+    max-width: 100%;
+    /* grid-row: 3/4; */
+}
+
+.footer{
+    grid-column: 1/-1;
+    /* grid-row: 6/7; */
+    background-color:#63624D;
+	color:#fff;
+}
+
+.fixed {
+	position: fixed;
+	background-color: #fff;
+	text-align: center;
+	bottom: 0;
+	right: 0;
+	width: 150px;
+	border: 3px solid black;
+  }
+
+  a{
+	  color: black;
+	  font-style: bold;
+	  font-weight: bold;
+	  text-decoration: none;
+
+  }
+  a:visited{
+	color: black;
+}
+
+.bild{
+    width: 100%;
+    display: block;
+
+}
+
+/* @media only screen and (max-width: 1024px) {
+    /.bild{
+    
+    } 
+    } */
+
+
+@media only screen and (max-width: 768px) {
+    
+    .section1{
+        grid-column: 1/13;
+    }
+    .section2{
+        grid-column: 1/13;
+    }
+
+    .section4{
+        grid-column: 1/7;
+    }
+    
+    .section5{
+        grid-column:7/13;
+    }
+
+    .section6{
+        grid-column: 1/7;
+    }
+    
+    .section7{
+        grid-column:7/13;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .section4{
+        grid-column: 1/13;
+    }
+    
+    .section5{
+        grid-column:1/13;
+    }
+
+    .section6{
+        grid-column: 1/13;
+    }
+    
+    .section7{
+        grid-column:1/13;
+    }
+}
