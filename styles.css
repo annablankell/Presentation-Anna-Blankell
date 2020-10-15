@@ -1,41 +1,37 @@
+/* Stylat bakgrund och sidans text. Valt att sätta storlek i em istället för pts eller px. */
 body{
     background-color: #f4f4f4;
     color: rgb(20, 20, 20);
     font-family: Verdana, Geneva, "Tahoma", sans-serif;
-    font-size: 18px;
+    font-size: 1em;
     line-height: 1.6em;
-
 }
 
-
-
+/* Stylat headern och lagt in en bild. */
 #mainHeader{
-    color: #fff;
     background-image:url('./Bilder/skog.jpg');
-    text-align: center;
 	background-position: center right;
-	min-height:300px;
-	/* margin-bottom:30px; */
+    min-height:300px;
 }
 
 #mainHeader h1{
+    text-align: center;
     color: #fff;
 	font-size:80px;
 	line-height: 1.6em;
 	padding-top:80px;
 }
 
+/* Vill att min navbar ska ligga kvar på sidan när man scrollar */
  #navbar{
 	background-color:#63624D;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	position: -webkit-sticky;
     position: sticky;
     top: 0;
 	padding: 0px;
     overflow: hidden;
     text-align: center;
-    /* grid-column: 1/-1;
-    grid-row: 2/3; */
 }
 
 #navbar ul{
@@ -56,96 +52,106 @@ body{
 	padding-right:25px;
 }
 
-
-
+/* Min grid som innahåller resten av innehållet. Satte 12 columns för att få den mer flexibel. */
 .gridContainer{
     display: grid;
     grid-gap: 1em;
     height: 100%;
     width: 100%;
     grid-template-columns: repeat(12, 1fr);
-    /* grid-template-rows: repeat(6, 1fr); */
     box-sizing: border-box;
-    /* grid-template-columns: fit-content(100%); */
     }
 
-
+    /* Använde border på alla divar när jag jobbade med griden och hade då border-style solid, för att lättare kunna se var rutorna/divarna sträckte sig. Har kommenterat ut det nedan*/
     .gridContainer div{
-    border-style: none;
+    /* border-style: solid; */
     padding: 5px;
     }
 
-
+    /* Vill visa att jag kan sätta ut position, men det behövds egentligen inte, så jag har det bara i min första sektion */
 .section1{
+    position: static;
     grid-column: 1/10;
-    /* grid-row: 1/2; */
 }
 
+/* Har satt en max-width för att vara säker på att bilden håller sig på plats */
 .section2{  
     grid-column: 10/13;
-    grid-row: 1/2; 
     max-width: 100%;
-    
 }
-
-
 
 .section3{
-    grid-column: 1/13;
-    /* grid-row: 2/3 */
+    grid-column: 1/13;  
 }
 
+/* Skapat en knapp med en länk i. Ville att knappens text skulle hamna i mitten av knappen. VIll egentligen inte ha någon border, men för att visa att jag vet hur man gör, satte jag färgen till samma som bodyns bakgrund*/
 .buttonInstagram{
 	background-color:#63624D;
-	border: solid 3px;
+    border: solid 3px;
+    border-color: #f4f4f4;
 	padding: 20px;
     border-radius: 10px;
-    color: black;
+    color: white;
     font-size: 20px;
     justify-self: center;
     text-align: center;
 }
 
+/* Centrerade  knappen till att vara i mitten av diven*/
 .divInstagram{
-    text-align: center;
     grid-column: 1/13;
-
+    text-align: center;
 }
 
 
+.divInstagram a{
+        color: white;
+        font-style: bold;
+        font-weight: bold;
+        text-decoration: none; 
+    }
+    
+    /* Vill att länken ska ha samma färg även när den har varit besökt */
+.divInstagram a:visited{
+      color: white;
+  }
+
+  /* Vill att texten ska bli svart när man hovrar över knappen */
+  .divInstagram a:hover{
+    color: black    ;
+}
 
 .section4{
     grid-column: 1/4;
     max-width: 100%;
-    /* grid-row: 3/4; */
+
 }
 
 
 .section5{
     grid-column:4/7;
     max-width: 100%;
-    /* grid-row: 3/4; */
 }
 
 .section6{
     grid-column: 7/10;
     max-width: 100%;
-    /* grid-row: 3/4; */
 }
 
 .section7{
     grid-column: 10/13;
     max-width: 100%;
-    /* grid-row: 3/4; */
 }
 
-.footer{
-    grid-column: 1/-1;
-    /* grid-row: 6/7; */
+#footer{
+    margin-top: 1em;
+    padding: 10px;
+    text-align: center;
     background-color:#63624D;
 	color:#fff;
 }
 
+/* Min 'Till toppen'-div vill jag ska ligga kvar längst nre till höger hela tiden. */
 .fixed {
 	position: fixed;
 	background-color: #fff;
@@ -156,22 +162,29 @@ body{
 	border: 3px solid black;
   }
 
-  a{
+  .fixed a{
 	  color: black;
 	  font-style: bold;
 	  font-weight: bold;
 	  text-decoration: none;
 
   }
-  a:visited{
+  .fixed a:visited{
 	color: black;
 }
 
+/* Enligt uppgiften skulle vi styla våra bilder med borders. Jag vill dock inte ha någon border, så jag satte border-style: none, för att visa att jag vet hur man gör.*/
 .bild{
     width: 100%;
+    position: static;
     display: block;
+    border-style: none;
+    border-width: 2px;
+
 
 }
+/* Nedan har jag listat olika media queries för att göra sidan responsiv. Ner till 768px händer inget, då är sidan som vanligt. 
+Melan 768 och 425px vill jag att vissa sake lägger sig på en rad och vissa andra på två rader. Från 425 vill jag att de som låg å två rader, nu ska ligga på en rad. Efter denna px-storlek har jag inte stylat mer, för man titar ofta inte på så små skärmar. */
 
 /* @media only screen and (max-width: 1024px) {
     /.bild{
