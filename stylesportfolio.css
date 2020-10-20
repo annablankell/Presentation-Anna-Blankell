@@ -1,0 +1,181 @@
+/* *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} */
+
+body{
+    background-color: #f4f4f4;
+    color: rgb(20, 20, 20);
+    font-family: Verdana, Geneva, "Tahoma", sans-serif;
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+.main-header{
+    background-image:url('./Bilder/skog.jpg');
+	background-position: center right;
+    min-height:300px;
+}
+
+.main-header h1{
+    text-align: center;
+    color: #fff;
+	font-size:80px;
+	line-height: 1.6em;
+	padding-top:80px;
+	z-index: 9;
+	opacity: 0.9;
+}
+
+nav{
+	background: #63624D;
+	height: 4em;
+	position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+	padding: 0px;
+	overflow: hidden;
+	width: 100%;
+	z-index: 10;
+	margin-bottom: 50px;
+}
+
+.navbar-ul{
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	list-style: none;
+	
+}
+
+.navbar-ul > li{
+	border: solid 3px red; /*DETTA SKA BORT SEDAN!!*/
+	padding: 5px;
+}
+
+.navbar-ul >li> a{
+	color:#fff; 
+	text-decoration: none;
+	font-size: 1.5em;
+	font-weight: bold;
+	opacity: 0.9;
+}
+
+.navbar-ul >li> a:hover{
+	color: #AAAAA8; 
+	text-decoration: none;
+	font-size: 1.5em;
+	font-weight: bold;
+	opacity: 0.9;
+}
+
+.grid-container{
+
+	display: grid;
+	grid-gap: 5em;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+	box-sizing: border-box;
+	padding-left: 50px;
+	padding-right: 50px;
+
+}
+
+.grid-container >div { /*Här använder jag en border under tiden jag arbetar för att se var mina 'boxar' börjar och slutar. */
+	border: solid 3px red; 
+	padding: 5px;
+	position: relative; /*KOLLA OM DET FUNKAR*/
+	text-align: center;/*KOLLA OM DET FUNKAR*/
+}
+
+img{
+	position: relative;
+	display: block;
+	width: 100%;
+	
+}
+
+
+
+
+.project{
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+	font-size: 1.6em;
+	color: #fff; */
+
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.project1{
+	grid-column: 1/5;
+	max-width: 100%;
+
+	
+}
+
+/* .project1 p{
+	position: absolute;
+	background-color: black;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+} */
+
+
+.project2{
+	grid-column: 5/9;
+    max-width: 100%;
+}
+.project3{
+	grid-column: 9/13;
+    max-width: 100%;
+}
+
+.project4{
+	grid-column: 1/7;
+    max-width: 100%;
+}
+
+.project5{
+	grid-column: 7/13;
+    max-width: 100%;
+}
+
+/* Här nedan har jag en länk som tar en till toppen av sidan */
+.fixed {
+	position: fixed;
+	background-color: #fff;
+	text-align: center;
+	bottom: 0;
+	right: 0;
+	width: 150px;
+	border: 3px solid black;
+  }
+
+  .fixed a{
+	  color: black;
+	  font-style: bold;
+	  font-weight: bold;
+	  text-decoration: none;
+
+  }
+  .fixed a:visited{
+	color: black;
+}
