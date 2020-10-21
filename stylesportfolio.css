@@ -1,143 +1,265 @@
-/* *{
+*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-} */
+}
 
 body{
     background-color: #f4f4f4;
     color: rgb(20, 20, 20);
     font-family: Verdana, Geneva, "Tahoma", sans-serif;
     font-size: 1em;
-    line-height: 1.6em;
+	line-height: 1.6em;
+
 }
 
 .main-header{
     background-image:url('./Bilder/skog.jpg');
 	background-position: center right;
-    min-height:300px;
+	min-height:300px;
+
 }
 
 .main-header h1{
-    text-align: center;
-    color: #fff;
+	text-align: center;
+  color: #fff;
 	font-size:80px;
 	line-height: 1.6em;
 	padding-top:80px;
-	z-index: 9;
 	opacity: 0.9;
 }
 
-nav{
-	background: #63624D;
-	height: 4em;
+/* .navbar{
+	background-color:#63624D;
+	margin-bottom: 5px;
 	position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
 	padding: 0px;
-	overflow: hidden;
-	width: 100%;
-	z-index: 10;
-	margin-bottom: 50px;
-}
+  overflow: hidden;
+  text-align: center;
+  z-index: 20;
 
-.navbar-ul{
-	display: flex;
-	align-items: flex-start;
-	position: relative;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+} */
+
+/* .navbar ul{
+display: flex;
+justify-content: space-between;
+margin-top:30px;
+	padding: 0px;
 	list-style: none;
-	
+  margin-left: 0px;
+  max-height: 70px;
 }
 
-.navbar-ul > li{
-	border: solid 3px red; /*DETTA SKA BORT SEDAN!!*/
-	padding: 5px;
+.meny  li{
+	display:inline;
 }
+.submenu  li{
+	display:block;
+} */
 
-.navbar-ul >li> a{
-	color:#fff; 
+ /* .navbar a{
+	color:#fff;
 	text-decoration: none;
-	font-size: 1.5em;
-	font-weight: bold;
-	opacity: 0.9;
+	font-size:25px;
+	padding-right:25px; 
+} */
+
+/* ---------------------------------------------------- */
+/* Navbar 1 test */
+
+
+
+/* 
+
+a:link{
+  color:#fff;
+  text-decoration: none;
+  
 }
 
-.navbar-ul >li> a:hover{
-	color: #AAAAA8; 
-	text-decoration: none;
-	font-size: 1.5em;
-	font-weight: bold;
-	opacity: 0.9;
+a:visited{
+  color: #fff;
+  text-decoration: none;
 }
+
+a:hover{
+  color: #999;
+}
+
+a:active{
+  text-decoration: underline;
+}
+
+.meny li{
+  list-style-type: none;
+ 
+}
+
+.meny{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+li{
+  display: block;
+  transition-duration: 0.5s;
+}
+
+li:hover{
+  cursor: pointer;
+}
+
+ul li ul{
+  visibility: hidden;
+  opacity: 0;
+  position: relative;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+  
+}
+
+ul li:hover > ul,
+ul li ul:hover{
+visibility: visible;
+opacity: 1;
+display: block;
+}
+
+ul li ul li{
+  clear: both;
+  width: 100%;
+} 
+
+/* ------------------NAVBAR 1 TEST SLUT---------------------- */
+
+/*---------------- NAVBAR 2 TEST -------------- */
+a:link{
+    color: #000000;
+    text-decoration: none;
+    
+}
+ 
+a:visited{
+    color: #000;
+    text-decoration: none;
+}
+ 
+a:hover{
+    color: #999;
+}
+ 
+a:active{
+    text-decoration: underline;
+}
+ 
+#meny li{
+    list-style-type: none;
+   
+}
+ 
+#meny{
+    display: flex;
+    align-items: flex-start;
+	justify-content: space-between;
+	max-width: 100%;
+	max-height: 100%;
+}
+ 
+li{
+    display: block;
+    transition-duration: 0.5s;
+}
+ 
+li:hover{
+    cursor: pointer;
+}
+ 
+ul li ul{
+    visibility: hidden;
+    opacity: 0;
+    position: relative;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+    
+}
+ 
+ul li:hover > ul,
+ul li ul:hover{
+visibility: visible;
+opacity: 1;
+display: block;
+
+}
+ 
+ul li ul li{
+    clear: both;
+	width: 100%;
+
+}
+/* ----------------NAVBAR 2 TEST SLUT----------------  */
 
 .grid-container{
+display: grid;
+grid-gap: 1em;
+height: 100%;
+width: 100%;
+grid-template-columns: repeat(12, 1fr);
+box-sizing: border-box;
 
-	display: grid;
-	grid-gap: 5em;
-    height: 100%;
-    width: 100%;
-    grid-template-columns: repeat(12, 1fr);
-	box-sizing: border-box;
-	padding-left: 50px;
-	padding-right: 50px;
+
+	
 
 }
 
 .grid-container >div { /*Här använder jag en border under tiden jag arbetar för att se var mina 'boxar' börjar och slutar. */
 	border: solid 3px red; 
-	padding: 5px;
-	position: relative; /*KOLLA OM DET FUNKAR*/
-	text-align: center;/*KOLLA OM DET FUNKAR*/
+	/* padding: 5px; */
+	/* position: relative; HÅLL KOLL HÄR */
+	text-align: center;
+	/* margin: 0 auto; */
+	height:100%;
+	max-width: 100%;
+	position: relative; 
 }
+
+
 
 img{
-	position: relative;
-	display: block;
+	/* position: relative; KOLLA OM DETTA MÅSTE ÄNDRAS FÖR ATT FÅ MED TEXT*/
+	position: static;
+    display: block;
 	width: 100%;
-	
+	height: 100%;
 }
 
 
-
-
-.project{
-	/* position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+h3 { /*MÅSTE DENNA IN I DIVEN PÅ NÅGOT VIS??*/
 	font-weight: bold;
-	font-size: 1.6em;
-	color: #fff; */
-
-	color: white;
-	font-size: 20px;
+	color: #fff;  
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	text-align: center;
+	bottom: 0;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+	color: #f1f1f1;
+	width: 100%;
+
 }
 
+.project-info{
+	grid-column: 1/-1;
+	max-width: 100%;
+}
 .project1{
 	grid-column: 1/5;
-	max-width: 100%;
-
-	
+	max-width: 100%;		
 }
-
-/* .project1 p{
-	position: absolute;
-	background-color: black;
-	color: white;
-	padding-left: 20px;
-	padding-right: 20px;
-} */
-
 
 .project2{
 	grid-column: 5/9;
@@ -158,6 +280,19 @@ img{
     max-width: 100%;
 }
 
+
+
+
+footer{
+    margin-top: 1em;
+    padding: 20px;
+    text-align: center;
+    background-color:#63624D;
+	color:#fff;
+	width: 100%;
+
+
+}
 /* Här nedan har jag en länk som tar en till toppen av sidan */
 .fixed {
 	position: fixed;
@@ -178,4 +313,61 @@ img{
   }
   .fixed a:visited{
 	color: black;
+}
+
+
+
+
+/* Nedan har jag listat olika media queries för att göra sidan responsiv. Ner till 768px händer inget, då är sidan som vanligt. 
+Melan 768 och 425px vill jag att vissa sake lägger sig på en rad och vissa andra på två rader. Från 425 vill jag att de som låg å två rader, nu ska ligga på en rad. Efter denna px-storlek har jag inte stylat mer, för man titar ofta inte på så små skärmar. */
+
+/* @media only screen and (max-width: 1024px) {
+    /.bild{
+    
+    } 
+    } */
+
+
+@media only screen and (max-width: 768px) {
+    
+    .project1{
+        grid-column: 1/7
+    }
+    .project2{
+        grid-column: 7/13;
+    }
+
+    .project3{
+        grid-column: 1/7;
+    }
+    
+    .project4{
+        grid-column:7/13;
+    }
+
+    .project5{
+        grid-column: 1/13;
+    }
+  
+}
+
+@media only screen and (max-width: 425px) {
+	.project1{
+        grid-column: 1/13
+    }
+    .project2{
+        grid-column: 1/13;
+    }
+
+    .project3{
+        grid-column: 1/13;
+    }
+    
+    .project4{
+        grid-column:1/13;
+    }
+
+    .project5{
+        grid-column: 1/13;
+    }
 }
