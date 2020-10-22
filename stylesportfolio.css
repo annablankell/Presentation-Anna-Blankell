@@ -1,23 +1,26 @@
+/* Återställer marginal och lägger in border-box för att padding, border etc ska räknas in i storleken av boxarna */
+
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+/* Vill ha samma bakgrundsfärg på hela sidan, lägger alltså in den i bodyn */
 body{
     background-color: #f4f4f4;
     color: rgb(20, 20, 20);
     font-family: Verdana, Geneva, "Tahoma", sans-serif;
     font-size: 1em;
-	line-height: 1.6em;
-
+    line-height: 1.6em;
+    margin: 10px;
 }
 
 .main-header{
     background-image:url('./Bilder/skog.jpg');
-	background-position: center right;
-	min-height:300px;
-
+	  background-position: center right;
+    min-height:300px;
+    position: relative;
 }
 
 .main-header h1{
@@ -29,233 +32,126 @@ body{
 	opacity: 0.9;
 }
 
-/* .navbar{
-	background-color:#63624D;
-	margin-bottom: 5px;
-	position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-	padding: 0px;
-  overflow: hidden;
-  text-align: center;
-  z-index: 20;
-
-} */
-
-/* .navbar ul{
-display: flex;
-justify-content: space-between;
-margin-top:30px;
-	padding: 0px;
-	list-style: none;
-  margin-left: 0px;
-  max-height: 70px;
-}
-
-.meny  li{
-	display:inline;
-}
-.submenu  li{
-	display:block;
-} */
-
- /* .navbar a{
-	color:#fff;
-	text-decoration: none;
-	font-size:25px;
-	padding-right:25px; 
-} */
-
-/* ---------------------------------------------------- */
-/* Navbar 1 test */
-
-
-
-/* 
-
+/* Har stylat sidans länkar så att de har samma färg när de är obesökta som besökta, en en annan färg när man hovrar över dem */
 a:link{
-  color:#fff;
-  text-decoration: none;
-  
-}
-
-a:visited{
-  color: #fff;
-  text-decoration: none;
-}
-
-a:hover{
-  color: #999;
-}
-
-a:active{
-  text-decoration: underline;
-}
-
-.meny li{
-  list-style-type: none;
- 
-}
-
-.meny{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-li{
-  display: block;
-  transition-duration: 0.5s;
-}
-
-li:hover{
-  cursor: pointer;
-}
-
-ul li ul{
-  visibility: hidden;
-  opacity: 0;
-  position: relative;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-  left: 0;
-  display: none;
-  
-}
-
-ul li:hover > ul,
-ul li ul:hover{
-visibility: visible;
-opacity: 1;
-display: block;
-}
-
-ul li ul li{
-  clear: both;
-  width: 100%;
-} 
-
-/* ------------------NAVBAR 1 TEST SLUT---------------------- */
-
-/*---------------- NAVBAR 2 TEST -------------- */
-a:link{
-    color: #000000;
+    color:#fff;
     text-decoration: none;
-    
-}
- 
-a:visited{
-    color: #000;
+  
+  }
+  
+  a:visited{
+    color: #fff;
     text-decoration: none;
-}
- 
-a:hover{
+  }
+  
+  a:hover{
     color: #999;
-}
- 
-a:active{
+  }
+  
+  a:active{
     text-decoration: underline;
-}
- 
-#meny li{
-    list-style-type: none;
-   
-}
- 
-#meny{
+  }
+  
+  
+  /* Har lagt in min meny i en flexbox */
+  .meny{
     display: flex;
     align-items: flex-start;
-	justify-content: space-between;
-	max-width: 100%;
-	max-height: 100%;
-}
- 
-li{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color:#63624D;
+    text-align: center;
+  }
+  
+  .meny li{
+    list-style-type: none;
+  
+  }
+  /* Detta nedan gäller min lista/nav-items och hur dropdown-listan ska synas */
+  li{
+    color: #fff;
+    background: #63624D;
     display: block;
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
     transition-duration: 0.5s;
-}
- 
-li:hover{
-    cursor: pointer;
-}
- 
-ul li ul{
+  }
+  
+  li a {
+    color: #fff;
+  }
+  
+  ul li ul{
     visibility: hidden;
     opacity: 0;
-    position: relative;
     transition: all 0.5s ease;
     margin-top: 1rem;
     left: 0;
     display: none;
-    
-}
- 
-ul li:hover > ul,
-ul li ul:hover{
-visibility: visible;
-opacity: 1;
-display: block;
-
-}
- 
-ul li ul li{
+  }
+  
+  ul li:hover > ul,
+  ul li ul:hover{
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  position: absolute;
+  z-index: 10;  
+  }
+  
+  ul li ul li{
     clear: both;
-	width: 100%;
-
-}
-/* ----------------NAVBAR 2 TEST SLUT----------------  */
-
-.grid-container{
-display: grid;
-grid-gap: 1em;
-height: 100%;
-width: 100%;
-grid-template-columns: repeat(12, 1fr);
-box-sizing: border-box;
+    width: 100%;  
+  }
 
 
-	
-
+  /* Nedan börjar grid-containern */
+  .grid-container{
+    display: grid;
+    grid-gap: 1em;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    box-sizing: border-box;
 }
 
-.grid-container >div { /*Här använder jag en border under tiden jag arbetar för att se var mina 'boxar' börjar och slutar. */
-	border: solid 3px red; 
-	/* padding: 5px; */
-	/* position: relative; HÅLL KOLL HÄR */
+  .grid-container >div { 
+  /*Här använder jag en border under tiden jag arbetar för att se var mina 'boxar' börjar och slutar. */
+	/* border: solid 3px red;  */
+	padding: 5px;
 	text-align: center;
-	/* margin: 0 auto; */
 	height:100%;
 	max-width: 100%;
 	position: relative; 
 }
 
 
-
-img{
-	/* position: relative; KOLLA OM DETTA MÅSTE ÄNDRAS FÖR ATT FÅ MED TEXT*/
+.project{
 	position: static;
-    display: block;
 	width: 100%;
 	height: 100%;
 }
 
-
-h3 { /*MÅSTE DENNA IN I DIVEN PÅ NÅGOT VIS??*/
+/* En header som ligger ovanför bilderna */
+h3 { 
 	font-weight: bold;
-	color: #fff;  
-	position: absolute;
-	bottom: 0;
-	background: rgb(0, 0, 0); /* Fallback color */
-	background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-	color: #f1f1f1;
-	width: 100%;
-
+  color: white;
+  position: absolute;
+	bottom: 40px;
+  width: 100%;
+  height: 25%;
+  text-align: center;
 }
 
+
+/* Nedan har jag positionerat ut mina olika boxar i griden */
 .project-info{
 	grid-column: 1/-1;
 	max-width: 100%;
 }
+
 .project1{
 	grid-column: 1/5;
 	max-width: 100%;		
@@ -263,24 +159,58 @@ h3 { /*MÅSTE DENNA IN I DIVEN PÅ NÅGOT VIS??*/
 
 .project2{
 	grid-column: 5/9;
-    max-width: 100%;
+  max-width: 100%;
 }
+
 .project3{
 	grid-column: 9/13;
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .project4{
 	grid-column: 1/7;
-    max-width: 100%;
+  max-width: 100%;
 }
 
 .project5{
 	grid-column: 7/13;
-    max-width: 100%;
+  max-width: 100%;
 }
 
 
+.bootstrap-button{
+	grid-column: 5/9;
+  max-width: 100%;
+  margin-bottom: 40px; /* Vill ha lite större marginal till nästa sektion */
+}
+
+/* Vill att bilden ska ha mer opacitet när man hovrar över den */
+img:hover{
+  opacity: 0.5;
+}
+
+.flexContainer{  
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+/* Använde en border, precis som jag gjorde i griden, för att lättare se var mina flex-items var. */
+.flexItem{
+/* border: solid 3px red; */
+  margin: 5px; 
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+
+.flexItem img{
+    position: static;
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: space-evenly;
+    }
 
 
 footer{
@@ -288,11 +218,13 @@ footer{
     padding: 20px;
     text-align: center;
     background-color:#63624D;
-	color:#fff;
-	width: 100%;
-
-
+	  color:#fff;
+    width: 100%;
+    height: 50px;
 }
+
+
+
 /* Här nedan har jag en länk som tar en till toppen av sidan */
 .fixed {
 	position: fixed;
@@ -319,7 +251,7 @@ footer{
 
 
 /* Nedan har jag listat olika media queries för att göra sidan responsiv. Ner till 768px händer inget, då är sidan som vanligt. 
-Melan 768 och 425px vill jag att vissa sake lägger sig på en rad och vissa andra på två rader. Från 425 vill jag att de som låg å två rader, nu ska ligga på en rad. Efter denna px-storlek har jag inte stylat mer, för man titar ofta inte på så små skärmar. */
+
 
 /* @media only screen and (max-width: 1024px) {
     /.bild{
@@ -329,29 +261,63 @@ Melan 768 och 425px vill jag att vissa sake lägger sig på en rad och vissa and
 
 
 @media only screen and (max-width: 768px) {
+  .meny{
+    flex-direction: column;
+    }
+
+
+
+    ul{
+    align-content: center;
+    }
     
+
+
+    a:link{
+    font-size: 200%;
+    }
+        
+    .project1 >h3{
+      font-size: 1em;
+      color: red;
+    }
     .project1{
-        grid-column: 1/7
+        grid-column: 1/7;
+        
     }
     .project2{
-        grid-column: 7/13;
+     grid-column: 7/13;
     }
 
     .project3{
-        grid-column: 1/7;
+    grid-column: 1/7;
     }
     
     .project4{
-        grid-column:7/13;
+    grid-column:7/13;
     }
 
     .project5{
-        grid-column: 1/13;
+    grid-column: 1/13;
+    }
+
+    .flexContainer{
+    flex-wrap: wrap;
+    }
+    
+    .fixed{
+        display: none;
     }
   
 }
 
 @media only screen and (max-width: 425px) {
+
+    .flexItem h3{
+        font-size: 100%;
+        }
+
+
 	.project1{
         grid-column: 1/13
     }
@@ -370,4 +336,5 @@ Melan 768 och 425px vill jag att vissa sake lägger sig på en rad och vissa and
     .project5{
         grid-column: 1/13;
     }
+
 }

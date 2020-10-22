@@ -4,21 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesportfolio.css">
 </head>
 <body>
 
+  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+
+
+
+    <!-- Har tänkt på att använda semantic tags som t ex header, footer, main -->
 
   <header class="main-header">
     <h1>Anna Blankell</h1>
-</header>
+  </header>
 
-<ul id="meny">
-  <li><a href="Länk">Presentation</a></li>
-  <li><a href="Länk">CV</a></li>
-  <li><a href="Länk">Kontakt </a></li>
-  <li><a href="Länk">Sociala Medier</a>
-    <ul class="dropdown">
+<!-- Navigering med dropdown-meny. Notera att endast en länk går till ett nnat dkument, resten är dummy-länkar.-->
+<nav>
+<ul class="meny">
+  <li><a href="index.html">Presentation</a></li>
+  <li><a href="#">CV</a></li>
+  <li><a href="#">Kontakt </a></li>
+  <li><a href="#">Sociala Medier</a>
+    <ul class="lista">
       <li><a href="#">LinkedIn</a></li>
       <li><a href="#">Facebook </a></li>
       <li><a href="#">Instagram </a></li>
@@ -26,94 +45,121 @@
 </li>
   </ul>
 
-  
-<!-- NAVBAR 1 TEST -->
-    <!-- <div class="navbar">
-      <ul class="meny"> 
-          <li><a href="#">Portfolio</a></li> 
-          <li><a href="#">CV</a></li>
-          <li><a href="#">Kontakt</a></li>
-          <li><a href="#">Sociala medier</a>
-          <ul class="submenu">
-            <li><a href="#">LinkedIn</a></li> 
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </li>
-      </ul> 
-  </div> -->
+</nav>
 
-<!-- NAVBAR 1 TEST SLUT -->
+<!-- Själva huvudsidan nedan -->
+<main class="portfolio-main">
+  <!-- Har lagt in mina 'större projekt' och kommande webbprojekt i en grid -->
+  <div class="grid-container">
 
-<!-- NAVBAR 2 TEST -->
+    <div class="project-info">
+      <h2>Portfolio</h2>
+       <br>
+        <h4>Större projekt</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum explicabo error omnis! Soluta tenetur quod ipsam possimus iste, tempora mollitia aperiam eius atque, sequi facilis in corrupti autem rem dolor natus harum. Dolores recusandae pariatur eligendi facilis sapiente. Consequuntur, corporis?</p>
+    </div>
 
-
-
-<!-- NAVBAR 2 TEST SLUT -->
-
-    <!-- <section class="portfolio"> -->
-        <div class="grid-container">
-
-   
-          
-            <div class="project-info">
-                <h2>Portfolio</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum explicabo error omnis! Soluta tenetur quod ipsam possimus iste, tempora mollitia aperiam eius atque, sequi facilis in corrupti autem rem dolor natus harum. Dolores recusandae pariatur eligendi facilis sapiente. Consequuntur, corporis?</p>
-            </div>
-
-
-            <div class="project1">
-              <a href="#">
-                <img src="Bilder\Project1.jpg" alt="Projekt 1">
-                
-                  <h3>Projekt 1</h3>
-                
-              </a>
-            </div>
+    <!-- Lagt in samtliga projekt i griden som bild-länkar.
+    Har även använt Bootstrap-skuggning på alla stora projekt -->
+    <div class="project1">
+      <div class="shadow p-3 mb-5 bg-light rounded">
+       <a href="#">
+         <img class="project" src="Bilder\Project1.jpg" alt="Projekt 1">
+        <h3>Projekt 1</h3>
+        </a>
+      </div>
+    </div>
             
-            <div class="project2">
-              <a href="#">
-              <img src="Bilder\Project2.jpg" alt="Projekt 2">
-              
-                  <h3>Projekt 2</h3>
-                
-            </a> 
-            </div>
+    <div class="project2">
+      <div class="shadow p-3 mb-5 bg-light rounded">
+       <a href="#">
+        <img class="project" src="Bilder\Project2.jpg" alt="Projekt 2">
+        <h3>Projekt 2</h3>
+      </a> 
+      </div>
+    </div>
 
-            <div class="project3">
-              <a href="#">
-                <img src="Bilder\Project3.jpg" alt="Projekt 3">
-                
-                    <h3>Projekt 3</h3>
-               
-              </a>
-            </div>
+    <div class="project3">
+      <div class="shadow p-3 mb-5 bg-light rounded">
+       <a href="#">
+         <img class="project" src="Bilder\Project3.jpg" alt="Projekt 3">
+        <h3>Projekt 3</h3>
+        </a>
+     </div>
+    </div>
 
-            <div class="project4">
-              <a href="#">
-                <img src="Bilder\Project4.jpg" alt="Projekt 4">
-                  <h3>Projekt 4</h3>     
-              </a> 
-            </div>
+    <div class="project4">
+      <div class="shadow p-3 mb-5 bg-light rounded">
+       <a href="#">
+        <img class="project" src="Bilder\Project4.jpg" alt="Projekt 4">
+         <h3>Projekt 4</h3>     
+       </a> 
+      </div>
+    </div>
             
-            <div class="project5">
-              <a href="#">
-                <img src="Bilder\Project5.jpg" alt="Projekt 5">
-                    <h3>Projekt 5</h3> 
-              </a> 
-            </div>
-        
-        </div> <!-- Här slutar min grid-container -->
+    <div class="project5" >
+      <a href="#">
+        <div class="shadow p-3 mb-5 bg-light rounded">
+          <img class="project" src="Bilder\Project5.jpg" alt="Projekt 5">
+          <h3>Kommande projekt</h3> 
+       </a> 
+      </div>
+    </div>
 
-      
+    <div class="project-info">
+      <h4>Mindre projekt</h4>
+       p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum explicabo error omnis! Soluta tenetur quod ipsam possimus iste, tempora mollitia aperiam eius atque, sequi facilis in corrupti autem rem dolor natus harum. Dolores recusandae pariatur eligendi facilis sapiente. Consequuntur, corporis?</p>
+    </div>
 
-    <footer>
-            Anna Blankell, EC Utbildning 2020
-    </footer>
+     <!-- Ville få med ett Bootstrap-moment och det blev en knapp som jag har wrappat i en länk som ska ta användaren till ännu fler projekt -->
+    <div class="bootstrap-button">
+      <a href="#"><button type="button" class="btn btn-secondary btn-lg btn-block">Klicka här för full lista över projekt</button></a>
+    </div>
 
+
+  </div> <!-- Här slutar min grid-container -->
+
+ <!-- För att få med Flexbox, har jag här lagt upp en sektion som jag kallar 'mindre projekt'. Upplägget ska likna det ovan, så även här har jag bäddat in bilderna i länkar.-->
+  <div class="flexContainer">
+
+    <div class="flexItem">
+      <a href="#"><img src="Bilder\photo1.jpg" alt="Mindre projekt 1">
+      <h3 class="smaller-headerh3">Mindre <br>projekt 1</h3>
+      </a>
+    </div>
+
+    <div class="flexItem">
+      <a href="#"><img src="Bilder\photo2.jpg" alt="Mindre projekt 2">
+      <h3 class="smaller-headerh3">Mindre<br> projekt 2</h3>
+      </a>
+    </div>
+
+    <div class="flexItem"> 
+      <a href="#"><img src="Bilder\photo3.jpg" alt="Mindre projekt 3">
+      <h3 class="smaller-headerh3">Mindre<br> projekt 3</h3>
+      </a>
+    </div>
+
+    <div class="flexItem">
+      <a href="#"> <img src="Bilder\photo4.jpg" alt="Mindre projekt 4">
+      <h3 class="smaller-headerh3">Mindre<br> projekt 4</h3>
+      </a>
+    </div>
+
+    <!-- </div> Här slutar min flex-container -->
+
+  </div>
+
+  </main>
+
+  <footer>
+   <p>Anna Blankell, EC Utbildning 2020</p> 
+  </footer>
+
+  <!-- PÅ min profilsida hade jag en länk som tog användare till toppen när de scrollade. Det vill jag ha även här. -->
 
 <div class="fixed">
-    <a href="#top">Till toppen</a>
+  <a href="#top">Till toppen</a>
 </div>
 
     
