@@ -277,9 +277,6 @@ footer{
     font-size: 200%;
     }
         
-    .project1 >h3{
-      font-size: 1em;
-      color: red;
     }
     .project1{
         grid-column: 1/7;
